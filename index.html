@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>
+  	01 Bare Bones
+  </title>
+  <link 
+    rel="stylesheet" 
+    type="text/css" 
+    href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+  />
+  <style>
+  	.section div.container#card-box {
+  	    background-color: silver;
+       }
+       .postcard {
+       	background-color: wheat;
+           height: 200px;
+           width: 250px;
+           border-radius: 10px;
+       }
+  </style>
+</head>
+<body>
+	<section class="section">
+		<div class="content is-large">
+            <h1 class="title">
+  	           01 Bare Bones
+            </h1>
+            <h2 class="subtitle">
+  	          The journey of a thousand miles begins with a single step.
+            </h2>
+           <button class="button" id='new-card' href='#'>
+  	         New Post Card
+           </button>
+           <div class='postcard' contenteditable='true'>#</div>
+       </div>
+   </section>
+   <section class='section'>
+   	<div class='container' id='card-box'>
+   	</div>
+   	<p>New Card just need to drag and drop to create new one</p>
+   </section>
+   <!--
+   <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+   -->
+<script>
+   	function createPostCard(event) {
+       	alert('create post');
+       }
+   (function() {
+       //alert("ready for action");
+       //$('a').on('click', createPostCard); // doesnt work
+       const cardButton = document.querySelector('#new-card');
+       // had extra quotation breaking code :(
+       //alert(cardButton);
+       //alert('should have button');
+       cardButton.addEventListener('click', createPostCard);
+    })();
+   </script>
+</body>
+</html>
