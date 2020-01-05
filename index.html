@@ -1,8 +1,6 @@
 <html>
 <head>
-  <title>
-  	02 Skeleton Trials
-  </title>
+  <title>02 Skeleton Trials</title>
   <link 
     rel="stylesheet" 
     type="text/css" 
@@ -21,13 +19,19 @@
   </style>
 </head>
 <body class="has-navbar-fixed-bottom">
-	<nav class="navbar is-dark is-spaced is-fixed-bottom" role="navigation" aria-label="main navigation">
-		<div class="navbar-brand">
-            <a class="navbar-item">
-			    52 Card Pickup
-		    </a>
-		</div>
-	</nav>
+    <nav class="navbar is-dark is-spaced is-fixed-bottom" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item is-size-1">52 Card Pickup</a>
+                <a role="button" class="navbar-burger is-size-1" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+	
 	<section class="section">
 		<div class="content is-large">
             <h1 class="title">
@@ -42,30 +46,19 @@
            <div class='postcard' contenteditable='true'>#</div>
        </div>
    </section>
-   <section class='section'>
-   	<div class='container' id='card-box'>
-   	</div>
-   	<p>New Card just need to drag and drop to create new one</p>
-   </section>
-   <!--
-   <script
-			  src="https://code.jquery.com/jquery-3.4.1.js"
-			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-			  crossorigin="anonymous"></script>
-   -->
-<script>
-   	function createPostCard(event) {
-       	alert('create post');
-       }
-   (function() {
-       //alert("ready for action");
-       //$('a').on('click', createPostCard); // doesnt work
-       const cardButton = document.querySelector('#new-card');
-       // had extra quotation breaking code :(
-       //alert(cardButton);
-       //alert('should have button');
-       cardButton.addEventListener('click', createPostCard);
+    <section class='section'>
+        <div class='container' id='card-box'>
+        </div>
+        <p>New Card just need to drag and drop to create new one</p>
+    </section>
+    <script>
+    function createPostCard(event) {
+        alert('create post');
+    }
+    (function() {
+        const cardButton = document.querySelector('#new-card');
+        cardButton.addEventListener('click', createPostCard);
     })();
-   </script>
+    </script>
 </body>
 </html>
